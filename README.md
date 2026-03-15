@@ -12,3 +12,8 @@ Please note that this config is highly opinionated and might be suit for everyon
 
 Here are some screenshots:
 
+<img src="screenshots/telescope.png" alt="telescope" width="500"/>
+
+<img src="screenshots/oil.png" alt="telescope" width="500"/>
+
+<img src="screenshots/syntax.png" alt="telescope" width="500"/>
