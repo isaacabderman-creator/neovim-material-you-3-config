@@ -1,0 +1,47 @@
+return {
+  {
+    "nvim-telescope/telescope.nvim",
+    branch = "master",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      local telescope = require("telescope")
+      
+      telescope.setup({
+        defaults = {
+          -- Material 3 look: Use horizontal layout with specific proportions
+          layout_strategy = "horizontal",
+          layout_config = {
+            horizontal = {
+              prompt_position = "top",
+              preview_width = 0.55,
+            },
+          },
+          sorting_strategy = "ascending",
+          borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+          
+          -- Appearance matching your Matugen colors
+          set_env = { ["COLORTERM"] = "truecolor" },
+          mappings = {
+            i = {
+              ["<C-c>"] = require("telescope.actions").close,
+            },
+          },
+        },
+      })
+
+      -- Load fzf extension for faster searching
+      pcall(telescope.load_extension, "fzf")
+
+      -- Keybindings
+      local builtin = require("telescope.builtin")
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
+      vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep Search" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
+      vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help Tags" })
+    end,
+  },
+}
