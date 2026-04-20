@@ -1,6 +1,6 @@
 # Neovim Material You 3 Config with Matugen
 
-This is a personal Neovim that has dynamic color generation with Matugen based on your wallpaper.
+This is a personal Neovim config that has dynamic color generation with Matugen based on your wallpaper.
 It includes the folllowing basic utilities:
 - Telescope
 - Tree-sitter
