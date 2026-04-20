@@ -8,7 +8,7 @@ It includes the folllowing basic utilities:
 - Oil (file navigation, no neo-tree btw)
 - Conform ( for formatting )
 
-Please note that this config is highly opinionated and might be suit for everyone.
+Please note that this config is highly opinionated and might not suit everyone.
 
 Here are some screenshots:
 
